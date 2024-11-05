@@ -1,0 +1,20 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Django App with Tailwind</title>
+    <link rel="stylesheet" href="{% static 'css/output.css' %}" />
+  </head>
+
+  <body class="h-screen bg-slate-300 dark:bg-slate-400">
+    <section class="container mx-auto flex flex-col items-center">
+      <h1 class="mb-4 mt-10 text-6xl font-bold text-blue-500 dark:text-blue-200" >
+        Chat Bubble
+      </h1>
+      {% block content %} {% endblock %}
+    </section>
+  </body>
+</html>
